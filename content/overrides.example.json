@@ -1,0 +1,150 @@
+{
+  "contact": {
+    "name": "Alex Johnson",
+    "email": "alex@example.com",
+    "phone": "+1 (555) 987-6543",
+    "location": "Seattle, WA",
+    "website": "https://alexjohnson.dev",
+    "linkedin": "https://linkedin.com/in/alexjohnson",
+    "github": "https://github.com/alexjohnson"
+  },
+  "summary": "Full-stack engineer passionate about building user-centric applications with modern technologies and best practices. Experienced in leading cross-functional teams and delivering scalable solutions.",
+  "highlights": [
+    "Built and scaled web applications serving 100K+ daily active users",
+    "Reduced API response time by 60% through database optimization and caching",
+    "Led migration from monolith to microservices architecture",
+    "Mentored 8 junior developers and established team coding standards",
+    "Implemented CI/CD pipelines reducing deployment time by 80%",
+    "Achieved 99.9% uptime across all production services"
+  ],
+  "skills": [
+    {
+      "name": "TypeScript",
+      "category": "technical",
+      "level": "expert"
+    },
+    {
+      "name": "React",
+      "category": "technical",
+      "level": "expert"
+    },
+    {
+      "name": "Node.js",
+      "category": "technical",
+      "level": "advanced"
+    },
+    {
+      "name": "AWS",
+      "category": "technical",
+      "level": "advanced"
+    },
+    {
+      "name": "Docker",
+      "category": "technical",
+      "level": "intermediate"
+    },
+    {
+      "name": "Team Leadership",
+      "category": "soft",
+      "level": "advanced"
+    },
+    {
+      "name": "Project Management",
+      "category": "soft",
+      "level": "advanced"
+    },
+    {
+      "name": "AWS Certified Solutions Architect",
+      "category": "certification"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp Inc.",
+      "location": "Seattle, WA",
+      "startDate": "Jan 2022",
+      "endDate": "Present",
+      "current": true,
+      "bullets": [
+        "Led development of microservices architecture serving 1M+ users daily",
+        "Reduced system latency by 40% through performance optimization",
+        "Mentored junior developers and conducted code reviews",
+        "Implemented automated testing reducing bugs by 60%"
+      ],
+      "keywords": ["TypeScript", "React", "Node.js", "AWS", "Docker", "Kubernetes"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "StartupXYZ",
+      "location": "San Francisco, CA",
+      "startDate": "Jun 2020",
+      "endDate": "Dec 2021",
+      "current": false,
+      "bullets": [
+        "Built full-stack web application from MVP to production",
+        "Integrated payment systems processing $2M+ annually",
+        "Developed responsive UI components used across 15+ pages",
+        "Set up CI/CD pipeline reducing deployment time from hours to minutes"
+      ],
+      "keywords": ["JavaScript", "Vue.js", "Python", "PostgreSQL", "Stripe"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Platform",
+      "description": "Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard. Built for scalability with microservices architecture.",
+      "technologies": ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis"],
+      "url": "https://demo-ecommerce.alexjohnson.dev",
+      "github": "https://github.com/alexjohnson/ecommerce-platform",
+      "highlights": [
+        "Processes 1000+ orders per day",
+        "99.9% uptime with auto-scaling",
+        "Real-time inventory synchronization"
+      ]
+    },
+    {
+      "title": "Task Management App",
+      "description": "Collaborative task management application with real-time updates, team workspaces, and advanced filtering. Features drag-and-drop interface and mobile responsiveness.",
+      "technologies": ["React", "Node.js", "Socket.io", "MongoDB", "Material-UI"],
+      "url": "https://taskflow.alexjohnson.dev",
+      "github": "https://github.com/alexjohnson/taskflow",
+      "highlights": [
+        "Real-time collaboration features",
+        "Mobile-first responsive design",
+        "Advanced filtering and search"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Washington",
+      "location": "Seattle, WA",
+      "graduationDate": "2020",
+      "gpa": "3.8",
+      "honors": ["Magna Cum Laude", "Dean's List"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2023",
+      "expiryDate": "2026",
+      "credentialId": "AWS-CSA-12345",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    },
+    {
+      "name": "Certified Kubernetes Administrator",
+      "issuer": "Cloud Native Computing Foundation",
+      "date": "2022",
+      "expiryDate": "2025",
+      "credentialId": "CKA-67890"
+    }
+  ],
+  "theme": {
+    "primaryColor": "hsl(262, 83%, 58%)",
+    "accentColor": "hsl(262, 90%, 96%)"
+  }
+}
