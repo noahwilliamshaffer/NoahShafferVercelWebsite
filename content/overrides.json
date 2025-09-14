@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Resume Content Overrides",
+  "description": "Override any parsed content from your resume PDF",
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "example": "John Doe" },
+        "email": { "type": "string", "format": "email", "example": "john@example.com" },
+        "phone": { "type": "string", "example": "+1 (555) 123-4567" },
+        "location": { "type": "string", "example": "San Francisco, CA" },
+        "website": { "type": "string", "format": "uri", "example": "https://johndoe.com" },
+        "linkedin": { "type": "string", "format": "uri", "example": "https://linkedin.com/in/johndoe" },
+        "github": { "type": "string", "format": "uri", "example": "https://github.com/johndoe" }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Professional summary or objective",
+      "example": "Experienced software engineer with 5+ years building scalable web applications..."
+    },
+    "highlights": {
+      "type": "array",
+      "description": "3-6 key value propositions or achievements",
+      "items": { "type": "string" },
+      "maxItems": 6,
+      "example": [
+        "Led development of microservices architecture serving 1M+ users",
+        "Reduced deployment time by 80% through CI/CD automation",
+        "Mentored 5 junior developers and established coding standards"
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "description": "Technical and professional skills",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "category": { 
+            "type": "string", 
+            "enum": ["technical", "soft", "language", "certification"] 
+          },
+          "level": { 
+            "type": "string", 
+            "enum": ["beginner", "intermediate", "advanced", "expert"] 
+          }
+        },
+        "required": ["name", "category"]
+      },
+      "example": [
+        { "name": "TypeScript", "category": "technical", "level": "advanced" },
+        { "name": "AWS", "category": "technical", "level": "intermediate" },
+        { "name": "Team Leadership", "category": "soft", "level": "advanced" }
+      ]
+    },
+    "experience": {
+      "type": "array",
+      "description": "Work experience entries",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "company": { "type": "string" },
+          "location": { "type": "string" },
+          "startDate": { "type": "string" },
+          "endDate": { "type": "string" },
+          "current": { "type": "boolean" },
+          "bullets": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["title", "company", "startDate", "bullets"]
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Notable projects or portfolio items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "url": { "type": "string", "format": "uri" },
+          "github": { "type": "string", "format": "uri" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["title", "description"]
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Educational background",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": { "type": "string" },
+          "institution": { "type": "string" },
+          "location": { "type": "string" },
+          "graduationDate": { "type": "string" },
+          "gpa": { "type": "string" },
+          "honors": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["degree", "institution"]
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Professional certifications",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "issuer": { "type": "string" },
+          "date": { "type": "string" },
+          "expiryDate": { "type": "string" },
+          "credentialId": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "required": ["name", "issuer", "date"]
+      }
+    },
+    "theme": {
+      "type": "object",
+      "description": "Visual theme customization",
+      "properties": {
+        "primaryColor": { 
+          "type": "string", 
+          "pattern": "^hsl\\(\\d+,\\s*\\d+%,\\s*\\d+%\\)$",
+          "example": "hsl(221, 83%, 53%)"
+        },
+        "accentColor": { 
+          "type": "string", 
+          "pattern": "^hsl\\(\\d+,\\s*\\d+%,\\s*\\d+%\\)$",
+          "example": "hsl(210, 40%, 96%)"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "contact": {
+        "name": "Alex Johnson",
+        "email": "alex@example.com",
+        "phone": "+1 (555) 987-6543",
+        "location": "Seattle, WA",
+        "website": "https://alexjohnson.dev",
+        "linkedin": "https://linkedin.com/in/alexjohnson",
+        "github": "https://github.com/alexjohnson"
+      },
+      "summary": "Full-stack engineer passionate about building user-centric applications with modern technologies and best practices.",
+      "highlights": [
+        "Built and scaled web applications serving 100K+ daily active users",
+        "Reduced API response time by 60% through database optimization",
+        "Led migration from monolith to microservices architecture"
+      ],
+      "theme": {
+        "primaryColor": "hsl(262, 83%, 58%)",
+        "accentColor": "hsl(262, 90%, 96%)"
+      }
+    }
+  ]
+}
